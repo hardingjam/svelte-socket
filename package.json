@@ -1,0 +1,22 @@
+{
+  "name": "@monomango/touch-svelte-toolkit",
+  "version": "0.1.0",
+  "type": "module",
+  "svelte": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./socket": "./src/socket/index.js",
+    "./components": "./src/components/index.js",
+    "./services": "./src/services/index.js",
+    "./components/*": "./src/components/*.svelte"
+  },
+  "files": [
+    "src"
+  ],
+  "peerDependencies": {
+    "svelte": "^5.0.0"
+  },
+  "devDependencies": {
+    "svelte": "^5.39.6"
+  }
+}
