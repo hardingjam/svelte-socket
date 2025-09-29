@@ -4,7 +4,7 @@
 
 	interface Props {
 		children?: import('svelte').Snippet;
-		url: string = 'ws://localhost:9980/';
+		url?: string = 'ws://localhost:9980/';
 	}
 
 	let { children, url }: Props = $props();
