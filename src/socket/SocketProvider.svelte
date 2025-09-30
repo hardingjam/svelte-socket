@@ -15,10 +15,6 @@
 	onMount(() => {
 		socket = new Socket({ hostname });
 		setSocket(socket);
-		
-		return () => {
-			socket?.disconnect();
-		};
 	});
 </script>
 
