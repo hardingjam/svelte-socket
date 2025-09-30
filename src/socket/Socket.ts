@@ -1,3 +1,5 @@
+// TODO: Refactor this to be a svelte module, which would expose reactive state from it.
+
 /**
  * Manages WebSocket connections for real-time message communication.
  * Provides a robust WebSocket client with automatic connection management and message handling.
@@ -20,6 +22,7 @@ export class Socket {
   constructor(args: SocketConstructorArgs) {
     this.url = this.url = `ws://${args.hostname}:9980/`;
     console.log("Socket constructor called for:", this.url);
+    this.createSocket();
   }
 
   /**
