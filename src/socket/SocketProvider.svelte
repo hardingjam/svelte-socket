@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { setSocket } from './context';
 	import { Socket } from './Socket';
+	import { onMount } from 'svelte';
 	
 	interface Props {
 		children?: import('svelte').Snippet;
@@ -11,11 +12,11 @@
 	
 	let socket: Socket | null = $state(null);
 	
-	$effect(() => {
+	onMount(() => {
 		socket = new Socket(url);
 		socket.connect();
 		setSocket(socket);
-
+		
 		return () => {
 			socket?.disconnect();
 		};
