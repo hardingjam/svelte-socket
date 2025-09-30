@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { setSocket } from './context';
-	import {Socket} from './Socket';
+	import { Socket } from './Socket';
 	import { onMount } from 'svelte';
 	
 	interface Props {
