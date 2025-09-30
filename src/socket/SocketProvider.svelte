@@ -5,16 +5,15 @@
 	
 	interface Props {
 		children?: import('svelte').Snippet;
-		url?: string;
+		hostname?: string;
 	}
 	
-	let { children, url = 'ws://localhost:9980/' }: Props = $props();
+	let { children, hostname = 'localhost' }: Props = $props();
 	
 	let socket: Socket | null = $state(null);
 	
 	onMount(() => {
-		socket = new Socket(url);
-		socket.connect();
+		socket = new Socket({ hostname });
 		setSocket(socket);
 		
 		return () => {
