@@ -1,4 +1,4 @@
-import { getSocketContext } from './context';
+import { getSocketContext } from "./context";
 
 /**
  * Hook for accessing the socket in the application.
@@ -9,10 +9,10 @@ import { getSocketContext } from './context';
  * @throws {Error} If no Socket is found in context
  */
 export default function useSocket() {
-	const socket = getSocketContext();
-	if (!socket) {
-		throw new Error('Socket not found. Did you forget to setSocket?');
-	}
+  const socket = getSocketContext();
+  if (!socket) {
+    throw new Error("Socket not found. Did you forget to setSocket?");
+  }
 
-	return socket;
+  return socket;
 }

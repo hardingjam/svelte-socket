@@ -10,6 +10,10 @@
     "./services": "./src/services/index.js",
     "./components/*": "./src/components/*.svelte"
   },
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "prettier --check . && eslint ."
+  },
   "files": [
     "src"
   ],
@@ -17,6 +21,17 @@
     "svelte": "^5.0.0"
   },
   "devDependencies": {
-    "svelte": "^5.39.6"
+    "@eslint/css": "^0.11.1",
+    "@eslint/js": "^9.36.0",
+    "@eslint/json": "^0.13.2",
+    "@eslint/markdown": "^7.3.0",
+    "eslint": "^9.36.0",
+    "globals": "^16.4.0",
+    "jiti": "^2.6.0",
+    "svelte": "^5.39.6",
+    "typescript-eslint": "^8.45.0"
+  },
+  "dependencies": {
+    "prettier": "^3.6.2"
   }
 }

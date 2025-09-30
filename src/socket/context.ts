@@ -1,10 +1,10 @@
-import { getContext, setContext } from 'svelte';
-import type { Socket } from './Socket';
+import { getContext, setContext } from "svelte";
+import type { Socket } from "./Socket";
 
 /**
  * The context key used to store and retrieve the Socket instance
  */
-export const SOCKET_CONTEXT_KEY = 'svelte:socket';
+export const SOCKET_CONTEXT_KEY = "svelte:socket";
 
 /**
  * Sets the Socket instance in Svelte's context
@@ -13,7 +13,7 @@ export const SOCKET_CONTEXT_KEY = 'svelte:socket';
  * @returns {void}
  */
 export function setSocket(socket: Socket) {
-	setContext(SOCKET_CONTEXT_KEY, socket);
+  setContext(SOCKET_CONTEXT_KEY, socket);
 }
 
 /**
@@ -23,9 +23,9 @@ export function setSocket(socket: Socket) {
  * @throws {Error} If no Socket is found in context
  */
 export function getSocketContext(): Socket {
-	const socket = getContext<Socket | undefined>(SOCKET_CONTEXT_KEY);
-	if (!socket) {
-		throw new Error('Socket not found. Did you forget to setSocket?');
-	}
-	return socket;
+  const socket = getContext<Socket | undefined>(SOCKET_CONTEXT_KEY);
+  if (!socket) {
+    throw new Error("Socket not found. Did you forget to setSocket?");
+  }
+  return socket;
 }
