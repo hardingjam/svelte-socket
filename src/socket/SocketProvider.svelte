@@ -22,4 +22,6 @@
 	});
 </script>
 
-{@render children?.()}
+{#if socket}
+	{@render children?.()}
+{/if}
